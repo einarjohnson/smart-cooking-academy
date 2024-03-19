@@ -6,3 +6,8 @@ This whole thing is completely static so hosting costs should be minimal or none
 `npm run dev`
 
 go develop
+
+
+
+Based on 
+https://github.com/surjithctly/astroship

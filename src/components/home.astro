@@ -1,0 +1,45 @@
+---
+import { Picture } from "astro:assets";
+import bookCover1 from "assets/cover1.jpg";
+import bookCover2 from "assets/cover2.jpg";
+---
+
+<main
+  class="grid lg:grid-cols-3 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={bookCover1}
+      alt="Smart Cooking 1"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={bookCover2}
+      alt="Smart Cooking 2"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Why learn to cook?
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      We are passionate about communicating the fun of cooking and the rewards
+      of healthy eating. The objective is to introduce students to a wider range
+      of cooking and to develop their experience and appreciation of classic
+      dishes. Students gain a sense of achievement and confidence by learning in
+      a stimulated and fun environment. They also learn personal, time
+      management skills and organisational skills They take responsibility and
+      learn to be organised. They also make new friends. To book a place a
+      (deposit €50) required
+    </p>
+  </div>
+</main>

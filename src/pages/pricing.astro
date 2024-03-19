@@ -1,0 +1,87 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingCard from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "Levels 1, 11 years +",
+    price: "210 EUR",
+    popular: true,
+    features: [
+      "Aimed at young boys and girls",
+      "2 dishes each day",
+      "Students will supply their own ingredients while basic items e.g. herbs/ spices will be supplied by the school",
+      "Food and drink supplied for break time",
+    ],
+    button: {
+      text: "Get Started",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Level 2",
+    price: "230 EUR",
+    popular: true,
+    features: [
+      "Aimed at young boys and girls with keen interest in food",
+      "A basic knowledge of cooking is required",
+      "2 dishes each day",
+      "Food and drink supplied for break time",
+    ],
+    button: {
+      text: "Get Started",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Level 3",
+    price: "230 EUR",
+    popular: true,
+    features: [
+      "Aimed at young boys and girls who have completed 2 years of Home Economics or Level 2",
+      "Students will supply their own ingredients ",
+    ],
+    button: {
+      text: "Get Started",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Preparatory  course",
+    price: "230 EUR",
+    popular: true,
+    features: [
+      "Aimed at young boys and girls.",
+      "Students learn how to weigh and measure.",
+      "The importance of wholesome foods & healthy eating will be emphasised.",
+      "Each student cooks and bakes 2 dishes, either savoury and sweet, which they take home.",
+      "Ingredients and recipe sheets provided.",
+    ],
+    button: {
+      text: "Get Started",
+      link: "/contact",
+    },
+  },
+];
+---
+
+<Layout title="Pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Pricing</Fragment>
+      <Fragment slot="desc">
+        Here at Smart Cooking Academy we cater for all special dietary
+        requirements within our courses for example gluten free, wheat free,
+        lactose intolerant etc. Please feel free to contact any of course
+        coordinators for more information on how we can best facilitate your
+        requirements.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <PricingCard plan={item} />)}
+    </div>
+  </Container>
+</Layout>

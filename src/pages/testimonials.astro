@@ -1,0 +1,168 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="Testimonials">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Testimonials</Fragment>
+      <Fragment slot="desc"> Customer stories</Fragment>
+    </Sectionhead>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+      <div class="grid mb-8 lg:mb-12 lg:grid-cols-2">
+        <figure
+          class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+          <blockquote
+            class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+            <p class="my-4 italic">
+              We have done the cookery camp with Martina three times already and
+              really love it. The recipes are delicious and easy to follow. We
+              have had great fun and made new friends. Our mum loves the fact
+              that she gets a break from cooking for a week
+            </p>
+          </blockquote>
+          <figcaption class="flex justify-center items-center space-x-3">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+              <div>Jonathan Daniel and Andrew Kelly age 12</div>
+            </div>
+          </figcaption>
+        </figure>
+        <figure
+          class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+          <blockquote
+            class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+            <p class="my-4 italic">
+              Saibh had an amazing time at Smart Cooking Academy for the Busy
+              Bee Club. It was honestly the best summer activity she has ever
+              done . She looked forward to going each day, she thoroughly
+              enjoyed cooking all the delicious dishes and doing the art and
+              crafts. Its given her confidence in herself and in her abilities
+              and she loves helping to prepare and cook our family dinners in
+              the evening.
+            </p>
+          </blockquote>
+          <figcaption class="flex justify-center items-center space-x-3">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+              <div>Gemma</div>
+            </div>
+          </figcaption>
+        </figure>
+        <figure
+          class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+          <blockquote
+            class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+            <p class="my-4 italic">
+              This was a camp a gave me the opportunity to cook starters,
+              dinners and deserts on my own. As well as learning about healthy
+              eating we also learnt what flavours work together which was really
+              interesting. I can't wait for the next one
+            </p>
+          </blockquote>
+          <figcaption class="flex justify-center items-center space-x-3">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+              <div>Cass, age 11</div>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+          <blockquote
+            class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+            <p class="my-4 italic">
+              Two of our kids took part in these camps - one did the Busy Bee
+              and the other participated in the Level 1. Both still rave about
+              how good they were and how much fun they had. It was a great
+              confidence builder. And the food was top notch!
+            </p>
+          </blockquote>
+          <figcaption class="flex justify-center items-center space-x-3">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+              <div>Hilary (Mum)</div>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+          <blockquote
+            class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+            <p class="my-4 italic">
+              Thank you for the excellent course that Diego did with you while
+              we were in Dublin. He had a great time in the Academy and learnt
+              so much. He is planning the next dishes for home. The week of the
+              course the whole family were delighted with the excellent dishes
+              for dinner. It was brilliant. Keep up the good work.
+            </p>
+          </blockquote>
+          <figcaption class="flex justify-center items-center space-x-3">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+              <div>Carmen (Spain )</div>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+          <blockquote
+            class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+            <p class="my-4 italic">
+              My son Matthew attended the smart cooking course on 3 occasions
+              and thoroughly enjoyed it. He got a great training in a variety of
+              disciplines and learnt skills that will stand to him in the
+              future. The whole family enjoyed sampling his endeavours! I would
+              highly recommend this course.
+            </p>
+          </blockquote>
+          <figcaption class="flex justify-center items-center space-x-3">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+              <div>Aisling</div>
+            </div>
+          </figcaption>
+        </figure>
+        <figure
+          class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+          <blockquote
+            class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+            <p class="my-4 italic">
+              Aine really enjoyed the make and bake camp, in fact she is very
+              keen to go again this year. I really liked that you did a mix of
+              savoury and sweet recipes.
+            </p>
+          </blockquote>
+          <figcaption class="flex justify-center items-center space-x-3">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+              <div>Eleanor</div>
+            </div>
+          </figcaption>
+        </figure>
+        <figure
+          class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+          <blockquote
+            class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+            <p class="my-4 italic">
+              I really enjoyed this course, it gave me an interest in cooking
+              and I met new people. I cook nearly every week since and it gave
+              my parents a break from cooking dinner too! I would recommend this
+              course to everyone !!
+            </p>
+          </blockquote>
+          <figcaption class="flex justify-center items-center space-x-3">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+              <div>Fiona</div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </Container>
+</Layout>

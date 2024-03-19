@@ -10,7 +10,11 @@ import Button from "./ui/button.astro";
   id="form"
   class="needs-validation"
   novalidate>
-  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+  <input
+    type="hidden"
+    name="access_key"
+    value="6bd2d1bf-1cd8-48fc-811e-54d03e063b20"
+  />
   <!-- Create your free access key from https://web3forms.com/ -->
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
@@ -40,6 +44,70 @@ import Button from "./ui/button.astro";
     <div class="invalid-feedback text-red-400 text-sm mt-1">
       Please provide a valid email address.
     </div>
+  </div>
+  <div class="mb-5">
+    <input
+      type="text"
+      placeholder="Date of birth"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      name="dob"
+    />
+  </div>
+  <div class="mb-5">
+    <input
+      type="text"
+      placeholder="Course"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      name="course"
+    />
+  </div>
+  <div class="mb-5">
+    <input
+      type="text"
+      placeholder="Home address"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      name="home_address"
+    />
+  </div>
+  <div class="mb-5">
+    <input
+      type="text"
+      placeholder="Home phone number"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      name="home_telephone"
+    />
+  </div>
+  <div class="mb-5">
+    <input
+      type="text"
+      placeholder="Mobile phone number"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      name="mobile_telephone"
+    />
+  </div>
+  <div class="mb-5">
+    <input
+      type="text"
+      placeholder="School"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      name="school"
+    />
+  </div>
+  <div class="mb-5">
+    <input
+      type="text"
+      placeholder="Any medical notes"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      name="medical"
+    />
+  </div>
+  <div class="mb-5">
+    <input
+      type="text"
+      placeholder="Permission for children to be photographed for website and facebook"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      name="photo_permission"
+    />
   </div>
   <div class="mb-3">
     <textarea

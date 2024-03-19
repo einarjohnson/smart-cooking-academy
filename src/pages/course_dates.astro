@@ -1,0 +1,62 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Icon } from "astro-icon";
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="Course dates">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Course dates</Fragment>
+      <Fragment slot="desc">
+        Courses run for the following three weeks in 2024</Fragment
+      >
+    </Sectionhead>
+
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+      <div class="grid mb-8 lg:mb-12 lg:grid-cols-2">
+        <figure
+          class="flex flex-col justify-center items-center p-8 text-center border-b border-gray-200 md:p-12 lg:border-r dark:border-gray-700">
+          <h2 class="text-lg text-gray-800">Level 1-2</h2>
+
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:clock" />
+            <span>Week 1: July 15-19 9.30am - 12.30pm</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:clock" />
+            <span>Week 2: July 22-26 9.30- 12.30pm</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:clock" />
+            <span>Week 3: July 29 - August 2 9.30am - 12.30pm</span>
+          </div>
+        </figure>
+        <figure
+          class="flex flex-col justify-center items-center p-8 text-center border-b border-gray-200 md:p-12 lg:border-r dark:border-gray-700">
+          <h2 class="text-lg text-gray-800">Preparatory (9-10yrs)</h2>
+
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:clock" />
+            <span>Week 1: July 15-19 1.30 - 4pm</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:clock" />
+            <span>Week 2: July 22-26 1.30 - 4pm</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:clock" />
+            <span>Week 3: July 29 - August 2 1.30 - 4pm</span>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </Container>
+</Layout>

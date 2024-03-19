@@ -11,3 +11,5 @@ go develop
 
 Based on 
 https://github.com/surjithctly/astroship
+
+We are using https://docs.web3forms.com/ for the email form

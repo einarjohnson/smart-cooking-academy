@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
@@ -113,6 +112,26 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
             </p>
           </blockquote>
         </figure>
+        <figure
+          class="flex flex-col justify-center items-center p-8 text-center border-b border-gray-200 md:p-12 lg:border-r dark:border-gray-700">
+          <h2 class="text-lg text-gray-800">Level 4</h2>
+
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:clock" />
+            <span>3 Hours per day</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-0 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:euro" />
+            <span>210 for 1 week</span>
+          </div>
+          <blockquote
+            class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+            <p class="my-4 italic">
+              This advanced level course is aimed at boys and girls who have completed 3 years of Home Economics or Level 3 at Smart Cooking Academy. 
+              Students will supply their own ingredients except for basic items like herbs/spices which will be supplied by the school.
+            </p>
+          </blockquote>
+        </figure>        
         <figure
           class="flex flex-col justify-center items-center p-8 text-center border-b border-gray-200 md:p-12 lg:border-r dark:border-gray-700">
           <h2 class="text-lg text-gray-800">Preparatory course</h2>

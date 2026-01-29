@@ -4,7 +4,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://einarjohnson.github.io",
-  base: "/smart-cooking-academy/",
+  site: "https://smartcookingacademy.com",
+  base: "/",
   integrations: [tailwind(), mdx()],
 });

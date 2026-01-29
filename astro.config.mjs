@@ -6,6 +6,6 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://einarjohnson.github.io",
-  base: "/",
+  base: "/smart-cooking-academy/",
   integrations: [tailwind(), mdx(), sitemap()],
 });

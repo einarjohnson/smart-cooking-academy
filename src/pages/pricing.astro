@@ -1,0 +1,103 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingCard from "@components/pricing.astro";
+
+const backlink = "/contact";
+
+const pricing = [
+  {
+    name: "Levels 1, 11 years +",
+    price: "€215 for 1 week",
+    popular: true,
+    features: [
+      "Aimed at young boys and girls",
+      "2 dishes each day",
+      "Students will supply their own ingredients while basic items e.g. herbs/ spices will be supplied by the school",
+      "Food and drink supplied for break time",
+    ],
+    button: {
+      text: "Get Started",
+      link: backlink,
+    },
+  },
+  {
+    name: "Level 2",
+    price: "€215 for 1 week",
+    popular: true,
+    features: [
+      "Aimed at young boys and girls with keen interest in food",
+      "A basic knowledge of cooking is required",
+      "2 dishes each day",
+      "Food and drink supplied for break time",
+    ],
+    button: {
+      text: "Get Started",
+      link: backlink,
+    },
+  },
+  {
+    name: "Level 3",
+    price: "€215 for 1 week",
+    popular: true,
+    features: [
+      "Aimed at young boys and girls who have completed 2 years of Home Economics or Level 2",
+      "Students will supply their own ingredients ",
+    ],
+    button: {
+      text: "Get Started",
+      link: backlink,
+    },
+  },
+  {
+    name: "Level 4",
+    price: "€215 for 1 week",
+    popular: true,
+    features: [
+      "Aimed at boys and girls who have completed 3 years of Home Economics or Level 3 at Smart Cooking Academy",
+      "Students will supply their own ingredients ",
+    ],
+    button: {
+      text: "Get Started",
+      link: backlink,
+    },
+  },
+  {
+    name: "Preparatory  course",
+    price: "€235 for 1 week",
+    popular: true,
+    features: [
+      "Aimed at young boys and girls.",
+      "Students learn how to weigh and measure.",
+      "The importance of wholesome foods & healthy eating will be emphasised.",
+      "Each student cooks and bakes 2 dishes, either savoury and sweet, which they take home.",
+      "Ingredients and recipe sheets provided.",
+    ],
+    button: {
+      text: "Get Started",
+      link: backlink,
+    },
+  },
+];
+---
+
+<Layout title="Pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Pricing</Fragment>
+      <Fragment slot="desc">
+        We offer a variety of cooking courses tailored for children and
+        teenagers. Each course is designed to provide a fun, hands-on experience
+        that teaches essential cooking skills. Our pricing is transparent and
+        affordable, with no hidden costs. Choose the course that best fits your
+        child's interests and schedule. Let's inspire a new generation of chefs
+        together!
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <PricingCard plan={item} />)}
+    </div>
+  </Container>
+</Layout>

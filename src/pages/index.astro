@@ -1,0 +1,297 @@
+---
+import Container from "@components/container.astro";
+import Home from "@components/home.astro";
+import Layout from "@layouts/Layout.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import CoursesSection from "@components/courses-section.astro";
+import PricingCard from "@components/pricing.astro";
+import AboutSection from "@components/about-section.astro";
+import ContactSection from "@components/contact-section.astro";
+
+const backlink = "#contact";
+
+const pricing = [
+  {
+    name: "Levels 1, 11 years +",
+    price: "€215 for 1 week",
+    popular: true,
+    features: [
+      "Aimed at young boys and girls",
+      "2 dishes each day",
+      "Students will supply their own ingredients while basic items e.g. herbs/ spices will be supplied by the school",
+      "Food and drink supplied for break time",
+    ],
+    button: {
+      text: "Get Started",
+      link: backlink,
+    },
+  },
+  {
+    name: "Level 2",
+    price: "€215 for 1 week",
+    popular: true,
+    features: [
+      "Aimed at young boys and girls with keen interest in food",
+      "A basic knowledge of cooking is required",
+      "2 dishes each day",
+      "Food and drink supplied for break time",
+    ],
+    button: {
+      text: "Get Started",
+      link: backlink,
+    },
+  },
+  {
+    name: "Level 3",
+    price: "€215 for 1 week",
+    popular: true,
+    features: [
+      "Aimed at young boys and girls who have completed 2 years of Home Economics or Level 2",
+      "Students will supply their own ingredients ",
+    ],
+    button: {
+      text: "Get Started",
+      link: backlink,
+    },
+  },
+  {
+    name: "Level 4",
+    price: "€215 for 1 week",
+    popular: true,
+    features: [
+      "Aimed at boys and girls who have completed 3 years of Home Economics or Level 3 at Smart Cooking Academy",
+      "Students will supply their own ingredients ",
+    ],
+    button: {
+      text: "Get Started",
+      link: backlink,
+    },
+  },  
+  {
+    name: "Preparatory  course",
+    price: "€235 for 1 week",
+    popular: true,
+    features: [
+      "Aimed at young boys and girls.",
+      "Students learn how to weigh and measure.",
+      "The importance of wholesome foods & healthy eating will be emphasised.",
+      "Each student cooks and bakes 2 dishes, either savoury and sweet, which they take home.",
+      "Ingredients and recipe sheets provided.",
+    ],
+    button: {
+      text: "Get Started",
+      link: backlink,
+    },
+  },
+];
+---
+
+<Layout title="">
+  <!-- Home Section -->
+  <section id="home" class="min-h-screen flex items-center scroll-mt-24">
+    <Container>
+      <Home />
+    </Container>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="py-20 scroll-mt-24 bg-gradient-to-b from-transparent to-blue-50">
+    <Container>
+      <Sectionhead>
+        <Fragment slot="title">Our Amazing Courses! 🎓</Fragment>
+        <Fragment slot="desc">
+          From beginners to advanced chefs - we have the perfect course for everyone!
+        </Fragment>
+      </Sectionhead>
+      <div class="mt-12">
+        <CoursesSection />
+      </div>
+    </Container>
+  </section>
+
+  <!-- Course Dates Section -->
+  <section id="course-dates" class="py-20 scroll-mt-24 bg-gradient-to-b from-blue-50 to-pink-50">
+    <Container>
+      <Sectionhead>
+        <Fragment slot="title">Course Dates 📅</Fragment>
+        <Fragment slot="desc">
+          The courses are scheduled to take place in 2026.
+        </Fragment>
+      </Sectionhead>
+
+      <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+        <div class="grid gap-8 justify-items-center mb-8 lg:mb-12 lg:grid-cols-2">
+          <div class="fun-card w-full border-4 border-fun-blue border-opacity-30 bg-gradient-to-br from-white to-blue-50 relative overflow-hidden">
+            <div class="absolute top-4 right-4 text-6xl opacity-20">⭐</div>
+            <h2 class="text-2xl font-bold bg-gradient-to-r from-fun-blue to-fun-purple bg-clip-text text-transparent mb-4">🎯 Level 1</h2>
+
+            <div class="flex flex-col space-y-4 text-gray-700">
+              <div class="fun-card bg-white border-2 border-fun-blue border-opacity-20 hover:border-opacity-60">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="text-3xl">📅</span>
+                  <span class="font-bold text-fun-orange">Week 1</span>
+                </div>
+                <span class="block text-lg font-semibold">July 13th - 17th</span>
+                <span class="block text-fun-green font-medium">9:30am - 12:30pm</span>
+              </div>
+              <div class="fun-card bg-white border-2 border-fun-pink border-opacity-20 hover:border-opacity-60">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="text-3xl">📅</span>
+                  <span class="font-bold text-fun-orange">Week 2</span>
+                </div>
+                <span class="block text-lg font-semibold">July 20th - 24th</span>
+                <span class="block text-fun-green font-medium">9:30am - 12:30pm</span>
+              </div>
+              <div class="fun-card bg-white border-2 border-fun-purple border-opacity-20 hover:border-opacity-60">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="text-3xl">📅</span>
+                  <span class="font-bold text-fun-orange">Week 3</span>
+                </div>
+                <span class="block text-lg font-semibold">July 27th - 31st</span>
+                <span class="block text-fun-green font-medium">9:30am - 12:30pm</span>
+              </div>
+              <div class="fun-card bg-white border-2 border-fun-yellow border-opacity-40 hover:border-opacity-80">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="text-3xl">📅</span>
+                  <span class="font-bold text-fun-orange">Week 4</span>
+                </div>
+                <span class="block text-lg font-semibold">August 4th - 8th</span>
+                <span class="block text-fun-green font-medium">9:30am - 12:30pm</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="fun-card w-full border-4 border-fun-pink border-opacity-30 bg-gradient-to-br from-white to-pink-50 relative overflow-hidden">
+            <div class="absolute top-4 right-4 text-6xl opacity-20">🎨</div>
+            <h2 class="text-2xl font-bold bg-gradient-to-r from-fun-pink to-fun-purple bg-clip-text text-transparent mb-4">🍪 Preparatory (9-10yrs)</h2>
+
+            <div class="flex flex-col space-y-4 text-gray-700">
+              <div class="fun-card bg-white border-2 border-fun-pink border-opacity-20 hover:border-opacity-60">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="text-3xl">📅</span>
+                  <span class="font-bold text-fun-orange">Week 1</span>
+                </div>
+                <span class="block text-lg font-semibold">July 13th - 17th</span>
+                <span class="block text-fun-green font-medium">1:30pm - 4:00pm</span>
+              </div>
+              <div class="fun-card bg-white border-2 border-fun-purple border-opacity-20 hover:border-opacity-60">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="text-3xl">📅</span>
+                  <span class="font-bold text-fun-orange">Week 2</span>
+                </div>
+                <span class="block text-lg font-semibold">July 20th - 24th</span>
+                <span class="block text-fun-green font-medium">1:30pm - 4:00pm</span>
+              </div>
+              <div class="fun-card bg-white border-2 border-fun-blue border-opacity-20 hover:border-opacity-60">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="text-3xl">📅</span>
+                  <span class="font-bold text-fun-orange">Week 3</span>
+                </div>
+                <span class="block text-lg font-semibold">July 27th - 31st</span>
+                <span class="block text-fun-green font-medium">1:30pm - 4:00pm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20 scroll-mt-24 bg-gradient-to-b from-pink-50 to-purple-50">
+    <Container>
+      <Sectionhead>
+        <Fragment slot="title">Pricing 💰</Fragment>
+        <Fragment slot="desc">
+          Affordable courses with no hidden costs. Choose the perfect course for your child!
+        </Fragment>
+      </Sectionhead>
+
+      <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+        {pricing.map((item) => <PricingCard plan={item} />)}
+      </div>
+    </Container>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 scroll-mt-24 bg-gradient-to-b from-purple-50 to-orange-50">
+    <Container>
+      <Sectionhead>
+        <Fragment slot="title">About Us 🏫</Fragment>
+        <Fragment slot="desc">
+          Learn more about Smart Cooking Academy and what makes us special!
+        </Fragment>
+      </Sectionhead>
+      <div class="mt-12">
+        <AboutSection />
+      </div>
+    </Container>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 scroll-mt-24 bg-gradient-to-b from-orange-50 to-blue-50">
+    <Container>
+      <Sectionhead>
+        <Fragment slot="title">What Our Students Say! 💬</Fragment>
+        <Fragment slot="desc">
+          Hear from our amazing students and their families
+        </Fragment>
+      </Sectionhead>
+
+      <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+        <div class="grid gap-6 mb-8 lg:mb-12 lg:grid-cols-3">
+          <div class="fun-card flex flex-col justify-center items-center p-8 text-center border-4 border-fun-blue border-opacity-30 bg-gradient-to-br from-white to-blue-50">
+            <div class="text-5xl mb-4">⭐</div>
+            <blockquote class="mx-auto mb-8 max-w-2xl text-gray-600">
+              <p class="my-4 italic text-lg leading-relaxed">
+                I went to this camp four times, moving up a level each year. I loved getting to cook all the different dishes and I still use the recipes. I'm in third year now and Home Economics is one of my favourite subjects!
+              </p>
+            </blockquote>
+            <div class="font-bold text-fun-purple text-lg">
+              Katie 💜
+            </div>
+          </div>
+
+          <div class="fun-card flex flex-col justify-center items-center p-8 text-center border-4 border-fun-pink border-opacity-30 bg-gradient-to-br from-white to-pink-50">
+            <div class="text-5xl mb-4">🌟</div>
+            <blockquote class="mx-auto mb-8 max-w-2xl text-gray-600">
+              <p class="my-4 italic text-lg leading-relaxed">
+                Faye has been going for the past three summers and absolutely loves it. We've been very impressed with how confident she is now in the kitchen. We especially love her vegetarian curry!
+              </p>
+            </blockquote>
+            <div class="font-bold text-fun-pink text-lg">
+              Gemma (Faye's Mom) 💖
+            </div>
+          </div>
+
+          <div class="fun-card flex flex-col justify-center items-center p-8 text-center border-4 border-fun-orange border-opacity-30 bg-gradient-to-br from-white to-orange-50">
+            <div class="text-5xl mb-4">✨</div>
+            <blockquote class="mx-auto mb-8 max-w-2xl text-gray-600">
+              <p class="my-4 italic text-lg leading-relaxed">
+                I love going to Smart Cooking Academy. It's really fun and has helped me become much better at cooking. The teachers are amazing! My cousin goes too, which makes it even more fun.
+              </p>
+            </blockquote>
+            <div class="font-bold text-fun-orange text-lg">
+              Faye (13 years) 🍰
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 scroll-mt-24 bg-gradient-to-b from-blue-50 to-transparent">
+    <Container>
+      <Sectionhead>
+        <Fragment slot="title">Get In Touch! 📧</Fragment>
+        <Fragment slot="desc">
+          Ready to start your cooking journey? Contact us today!
+        </Fragment>
+      </Sectionhead>
+      <div class="mt-12">
+        <ContactSection />
+      </div>
+    </Container>
+  </section>
+</Layout>

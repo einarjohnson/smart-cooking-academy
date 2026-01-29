@@ -1,0 +1,49 @@
+---
+import ContactForm from "@components/contactform.astro";
+---
+
+<div class="max-w-4xl mx-auto">
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="fun-card border-4 border-blue-400 border-opacity-30 bg-gradient-to-br from-white to-blue-50">
+      <div class="text-5xl mb-4">📍</div>
+      <h3 class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mb-4">
+        Location
+      </h3>
+      <div class="space-y-4 text-gray-700">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">🏫</span>
+          <div>
+            <p class="font-semibold">Our Lady's Secondary School</p>
+            <p>Terenure, Dublin</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">🚌</span>
+          <p>Easy access by bus</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">🅿️</span>
+          <p>Free car parking available</p>
+        </div>
+      </div>
+
+      <div class="mt-6 p-4 bg-yellow-100 rounded-xl">
+        <p class="font-bold text-orange-500 text-lg">💰 Deposit: €50</p>
+        <p class="text-sm text-gray-600 mt-2">Secure your spot today!</p>
+      </div>
+    </div>
+
+    <div class="fun-card border-4 border-pink-400 border-opacity-30 bg-gradient-to-br from-white to-pink-50">
+      <ContactForm />
+    </div>
+  </div>
+
+  <div class="mt-8 text-center p-8 rounded-2xl shadow-lg" style="background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);">
+    <h3 class="text-2xl font-bold mb-3 text-white">
+      📧 Have Questions?
+    </h3>
+    <p class="text-lg text-white">
+      We'd love to hear from you! Fill out the form or reach out directly.
+    </p>
+  </div>
+</div>

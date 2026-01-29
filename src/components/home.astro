@@ -1,0 +1,97 @@
+---
+import { Picture } from "astro:assets";
+import bookCover1 from "assets/cover1.jpg";
+import bookCover2 from "assets/cover2.jpg";
+---
+
+<main class="container mx-auto px-4 py-12 md:py-20">
+  <div class="grid lg:grid-cols-2 gap-12 items-start">
+    <!-- Left Column: Logo and Books -->
+    <div class="space-y-8">
+      <!-- Main Logo -->
+      <div class="mb-8">
+        <img src="/logo.png" alt="Smart Cooking Academy" class="w-full max-w-md animate-float" />
+      </div>
+      
+      <!-- Book Images -->
+      <div class="grid grid-cols-2 gap-6 max-w-md">
+        <div class="animate-float">
+          <div class="hover-lift rounded-3xl overflow-hidden shadow-2xl">
+            <Picture
+              src={bookCover1}
+              alt="Smart Cooking Book 1"
+              widths={[200, 400, 600]}
+              sizes="(max-width: 800px) 100vw, 400px"
+              loading="eager"
+              format="avif"
+            />
+          </div>
+        </div>
+        <div class="animate-float" style="animation-delay: 0.3s;">
+          <div class="hover-lift rounded-3xl overflow-hidden shadow-2xl">
+            <Picture
+              src={bookCover2}
+              alt="Smart Cooking Book 2"
+              widths={[200, 400, 600]}
+              sizes="(max-width: 800px) 100vw, 400px"
+              loading="eager"
+              format="avif"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Text Content -->
+    <div class="space-y-8 animate-slide-in">
+    <div>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold lg:tracking-tight bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 bg-clip-text text-transparent mb-4">
+        Why learn to cook?
+      </h1>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Join our fun and educational cooking classes designed for children ages 9+!
+      </p>
+    </div>
+    
+    <div class="space-y-4">
+      <div class="fun-card hover-lift">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-3xl">🍎🥕</span>
+          <p class="text-lg font-bold text-green-500">Fresh & Healthy!</p>
+        </div>
+        <p class="text-gray-600">Discover the joy of cooking with fresh fruits and vegetables!</p>
+      </div>
+      
+      <div class="fun-card hover-lift">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-3xl">🍪🍰🥧</span>
+          <p class="text-lg font-bold text-pink-500">Bake Amazing Treats!</p>
+        </div>
+        <p class="text-gray-600">Learn to bake delicious cookies, cakes, and pies!</p>
+      </div>
+      
+      <div class="fun-card hover-lift">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-3xl">👫🎨</span>
+          <p class="text-lg font-bold text-blue-500">Make Friends & Have Fun!</p>
+        </div>
+        <p class="text-gray-600">
+          Build confidence, learn time management skills, and make new friends in a fun environment!
+        </p>
+      </div>
+    </div>
+    
+    <div class="p-6 rounded-2xl shadow-xl" style="background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);">
+      <p class="text-white font-bold text-xl mb-2">
+        🎯 Ready to Start Your Cooking Journey?
+      </p>
+      <p class="text-white text-lg">
+        Book your spot today! Deposit: €50
+      </p>
+      <a href="#contact" class="mt-4 inline-block bg-white text-orange-500 font-bold py-3 px-8 rounded-full hover:scale-110 transition-transform duration-200 shadow-lg">
+        Enroll Now! 🚀
+      </a>
+    </div>
+  </div>
+  </div>
+</main>

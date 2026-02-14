@@ -1,0 +1,99 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="Course dates">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Course dates</Fragment>
+      <Fragment slot="desc">
+        The courses are scheduled to take place in 2026.</Fragment
+      >
+    </Sectionhead>
+
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+      <div class="grid gap-8 justify-items-center mb-8 lg:mb-12 lg:grid-cols-2">
+        <figure
+          class="fun-card flex flex-col p-8 text-center border-4 border-fun-blue border-opacity-30 bg-gradient-to-br from-white to-blue-50 relative overflow-hidden">
+          <div class="absolute top-4 right-4 text-6xl opacity-20">⭐</div>
+          <h2 class="text-2xl font-bold bg-gradient-to-r from-fun-blue to-fun-purple bg-clip-text text-transparent mb-4">Level 1-4</h2>
+
+          <div class="flex flex-col space-y-4 text-gray-700">
+            <div class="fun-card bg-white border-2 border-fun-blue border-opacity-20 hover:border-opacity-60">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-3xl">📅</span>
+                <span class="font-bold text-fun-orange">Week 1</span>
+              </div>
+              <span class="block text-lg font-semibold">July 13th - 17th</span>
+              <span class="block text-fun-green font-medium">9:30am - 12:30pm</span>
+            </div>
+            <div class="fun-card bg-white border-2 border-fun-pink border-opacity-20 hover:border-opacity-60">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-3xl">📅</span>
+                <span class="font-bold text-fun-orange">Week 2</span>
+              </div>
+              <span class="block text-lg font-semibold">July 20th - 24th</span>
+              <span class="block text-fun-green font-medium">9:30am - 12:30pm</span>
+            </div>
+            <div class="fun-card bg-white border-2 border-fun-purple border-opacity-20 hover:border-opacity-60">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-3xl">📅</span>
+                <span class="font-bold text-fun-orange">Week 3</span>
+              </div>
+              <span class="block text-lg font-semibold">July 27th - 31st</span>
+              <span class="block text-fun-green font-medium">9:30am - 12:30pm</span>
+            </div>
+            <div class="fun-card bg-white border-2 border-fun-yellow border-opacity-40 hover:border-opacity-80">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-3xl">📅</span>
+                <span class="font-bold text-fun-orange">Week 4</span>
+              </div>
+              <span class="block text-lg font-semibold">August 4th - 8th</span>
+              <span class="block text-fun-green font-medium">9:30am - 12:30pm</span>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="fun-card flex flex-col p-8 text-center border-4 border-fun-pink border-opacity-30 bg-gradient-to-br from-white to-pink-50 relative overflow-hidden">
+          <div class="absolute top-4 right-4 text-6xl opacity-20">🎨</div>
+          <h2 class="text-2xl font-bold bg-gradient-to-r from-fun-pink to-fun-purple bg-clip-text text-transparent mb-4">🍪 Preparatory (9-10yrs)</h2>
+
+          <div class="flex flex-col space-y-4 text-gray-700">
+            <div class="fun-card bg-white border-2 border-fun-pink border-opacity-20 hover:border-opacity-60">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-3xl">📅</span>
+                <span class="font-bold text-fun-orange">Week 1</span>
+              </div>
+              <span class="block text-lg font-semibold">July 13th - 17th</span>
+              <span class="block text-fun-green font-medium">1:30pm - 4:00pm</span>
+            </div>
+            <div class="fun-card bg-white border-2 border-fun-purple border-opacity-20 hover:border-opacity-60">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-3xl">📅</span>
+                <span class="font-bold text-fun-orange">Week 2</span>
+              </div>
+              <span class="block text-lg font-semibold">July 20th - 24th</span>
+              <span class="block text-fun-green font-medium">1:30pm - 4:00pm</span>
+            </div>
+            <div class="fun-card bg-white border-2 border-fun-blue border-opacity-20 hover:border-opacity-60">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-3xl">📅</span>
+                <span class="font-bold text-fun-orange">Week 3</span>
+              </div>
+              <span class="block text-lg font-semibold">July 27th - 31st</span>
+              <span class="block text-fun-green font-medium">1:30pm - 4:00pm</span>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </Container>
+</Layout>
